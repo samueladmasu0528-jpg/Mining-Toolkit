@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@media print {
+  /* Hide non-printable elements when printing */
+  header, nav, button, input, textarea, select, pre {
+    display: none !important;
+  }
+
+  body, #root, main, div {
+    background: white !important;
+    color: black !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .printable-audit-sheet {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid;
+  }
+}
